@@ -14,6 +14,7 @@ import searchFilters from "./filtros_busqueda.js";
 import sorteoDigital from "./sorteo_digital.js";
 import slider from "./carrusel.js";
 import scrollSpy from "./scroll_spy.js";
+import smartVideo from "./video_inteligente.js";
 
 
 const d = document;
@@ -34,6 +35,7 @@ d.addEventListener("DOMContentLoaded",(e) =>{
   sorteoDigital(".player","#obtenerGanador");
   slider();
   scrollSpy();
+  smartVideo();
 });
 
 d.addEventListener("keydown", (e) => {

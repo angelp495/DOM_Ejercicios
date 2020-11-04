@@ -14,7 +14,7 @@ export default function webcam(id) {
     })
     .catch((err) => {
       $video.insertAdjacentHTML("beforebegin", `<p>Se presento el siguiente error: <mark>${err}</mark></p>`);
-      //console.log(`Sucedió el siguiente error!: ${err}`);
+      console.log(`Sucedió el siguiente error!: ${err}`);
     })
   }
 }

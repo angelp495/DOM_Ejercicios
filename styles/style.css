@@ -133,7 +133,7 @@ ul li {
 /* --- Secciones --- */
 
 .section h2 {
-  text-shadow: 2px 0px 0px var(--main-color), 4px 0px 0px var(--secon-color);
+  text-shadow: 2px 0px 0px var(--main-color);
   font-size: 2rem;
 }
 /* --- botones reloj */

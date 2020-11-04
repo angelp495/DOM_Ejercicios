@@ -14,13 +14,15 @@ export default function smartVideo(id) {
       }else{
         entry.target.pause();
       }
+
+       w.addEventListener("visibilitychange", (e) =>{
+        d.visibilityState === "visible"
+          ? entry.target.play()
+          : entry.target.pause();
+    });
     });
     
-    w.addEventListener("visibilitychange", (e) =>{
-      d.visibilityState === "visible"
-        ? entry.target.play()
-        : entry.target.pause();
-    });
+   
   }
 
   const observer = new IntersectionObserver(cb,{threshold: 0.5});

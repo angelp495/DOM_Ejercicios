@@ -15,6 +15,7 @@ import sorteoDigital from "./sorteo_digital.js";
 import slider from "./carrusel.js";
 import scrollSpy from "./scroll_spy.js";
 import smartVideo from "./video_inteligente.js";
+import contacFormValidations from "./validaciones_formulario.js";
 
 
 const d = document;
@@ -36,6 +37,7 @@ d.addEventListener("DOMContentLoaded",(e) =>{
   slider();
   scrollSpy();
   smartVideo();
+  contacFormValidations();
 });
 
 d.addEventListener("keydown", (e) => {

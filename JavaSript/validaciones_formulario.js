@@ -1,10 +1,10 @@
 const d = document;
 
 export default function contacFormValidations() {
-  const $form = d.querySelector("contact-form"),
+  const $form = d.querySelector(".contact-form"),
     $inputs = d.querySelectorAll(".contact-form [required]");
 
-    console.log($inputs);
+    //console.log($inputs);
 
     $inputs.forEach((input) => {
       const $span = d.createElement("span");
@@ -37,5 +37,23 @@ export default function contacFormValidations() {
 
           }
       }
+    });
+
+    //Loader y mensaje enviado.
+    d.addEventListener("submit",(e) =>{
+      e.preventDefault();
+      //alert("Enviando Formulario");
+
+      const $loader = d.querySelector(".contact-form-loader"), $response = d.querySelector(".contact-form-response");
+
+      $loader.classList.remove("none");
+
+      setTimeout(() => {
+        $loader.classList.add("none");
+        $response.classList.remove("none");
+        $form.reset();
+
+        setTimeout(() => $response.classList.add("none"), 2500);
+      }, 2000);
     });
 }
